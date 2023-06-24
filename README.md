@@ -1,13 +1,13 @@
 # SIMON GAME
 Repeat the pattern.  
-  
-  
+<br>
+<br>
 **LIVE DEMO:**  
     https://alunazzi.github.io/simon-game/index.html
 
 
 **DESCRIPTION:**  
-    The classic "Simon" game.
+    The classic "Simon" game.  
     Memorize the pattern and try to repeat it. How far can you go?
 
 
