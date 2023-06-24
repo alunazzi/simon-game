@@ -1,15 +1,21 @@
 # SIMON GAME
-Repeat the pattern.  
+Repeat the pattern.
+
 <br>
 <br>
+
 **LIVE DEMO:**  
     https://alunazzi.github.io/simon-game/index.html
 
+<br>
+<br>
 
 **DESCRIPTION:**  
     The classic "Simon" game.  
     Memorize the pattern and try to repeat it. How far can you go?
 
+<br>
+<br>
 
 **WEBSITE STRUCTURE:**   
     index.html  
@@ -27,6 +33,8 @@ Repeat the pattern.
         wrong.mp3  
         yellow.mp3  
 
+<br>
+<br>
 
 **HOW DOES IT WORK?**  
     - Press any key to start;  
