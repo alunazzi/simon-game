@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;900&display=swap');
+@font-face {
+    font-family: "PublicPixel";
+    src: URL("../fonts/publicPixel/PublicPixel.ttf") format("truetype");
+}
+
+:root {
+    --shadow-radius: 60px;
+    --border-radius-px: 20px;
+    --border-radius-perc: 100%;
+    --green: #3fb28d;
+    --light-green: #cbf6a0;
+    --red: #ff3e3e;
+    --light-red: #ffae6d;
+    --blue: #004fc4;
+    --light-blue: #a7d9ff;
+    --yellow: #ffcc00;
+    --light-yellow: #fff36d;
+}
+
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    background-color: #111117;
+}
+
+.title {
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    font-family: "PublicPixel", sans-serif;
+    display: flex;
+}
+
+h1 > span {
+    font-size: 3rem;    
+}
+
+.green {
+    color: var(--green);
+}
+
+.red{
+    color: var(--red);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+h2 {
+    font-family: "PublicPixel", sans-serif;
+    font-size: 2.5rem;
+    color: #FFEFCA;
+}
+
+#game-status{
+    font-size: 1.75rem;
+    color: var(--yellow);
+}
+
+h3 {
+    font-family: "PublicPixel", sans-serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #FFEFCA;
+}
+
+.container {
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    gap: 15px;
+    height: 300px;
+    width: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "green red"
+    "yellow blue";
+    justify-items: center;
+    align-items: center;
+}
+
+.button {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+#green {
+    background-color: var(--green);
+    border-radius: var(--border-radius-perc) var(--border-radius-px) var(--border-radius-px) var(--border-radius-px);
+
+}
+    .green-clicked {
+        background: radial-gradient(at bottom right, var(--light-green) 33%, var(--green) 100%);
+        box-shadow: 0 0 var(--shadow-radius) 0 var(--green);
+    }
+
+#red {
+    background-color: var(--red);
+    border-radius: var(--border-radius-px) var(--border-radius-perc) var(--border-radius-px) var(--border-radius-px);
+} 
+    .red-clicked {
+        background: radial-gradient(at bottom left, var(--light-red) 33%, var(--red) 100%);
+        box-shadow: 0 0 var(--shadow-radius) 0 var(--red);
+    }
+    
+#blue {
+    background-color: var(--blue);
+    border-radius: var(--border-radius-px) var(--border-radius-px) var(--border-radius-perc) var(--border-radius-px);
+}
+    .blue-clicked {
+        background: radial-gradient(at top left, var(--light-blue) 33%, var(--blue) 100%);
+        box-shadow: 0 0 var(--shadow-radius) 0 var(--blue);
+    }
+
+#yellow {
+    background-color: var(--yellow);
+    border-radius: var(--border-radius-px) var(--border-radius-px) var(--border-radius-px) var(--border-radius-perc);
+}
+    .yellow-clicked {
+        background: radial-gradient(at top right, var(--light-yellow) 33%, var(--yellow) 100%);
+        box-shadow: 0 0 var(--shadow-radius) 0 var(--yellow);
+    }
+
+.game-over {
+    background-color: #280000;
+}
+
+.spacer-tb30 { 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.spacer-top30 {
+    margin-top: 30px;
+}
+
+.spacer-bot15 {
+    margin-bottom: 15px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+

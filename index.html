@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/simon_game.css">
+
+        <title> Simon Game! </title>
+    </head>
+    <body>
+        <div class="container">
+            <div id="the-title" class="title spacer-tb30">
+                <h1>
+                    <span class="green">S</span>
+                    <span class="red">i</span>
+                    <span class="blue">m</span>
+                    <span class="yellow">o</span>
+                    <span class="green">n</span>
+                    <span> &nbsp </span> 
+                    <span class="red">G</span>
+                    <span class="blue">a</span>
+                    <span class="yellow">m</span>
+                    <span class="green">e</span>
+                </h1>
+            </div>
+            
+            <div class="game-base spacer-top30">
+                <div id="4-buttons" class="buttons">
+                    <div id="green" class="button"> </div>
+                    <div id="red" class="button"> </div>
+                    <div id="yellow" class="button"> </div>
+                    <div id="blue" class="button"> </div>
+                </div>
+            </div>
+            <div id="the-title" class="title spacer-tb30">
+                <h2 id="round" class="spacer-tb30"> Round 0</h2>
+                <h3 id="game-status" class="spacer-bot15"> START THE GAME </h3>
+                <h3 id="instruction"> by pressing &lt;ANY KEY&gt; </h3>                
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="js/simon_manager.js"></script>
+    </body>
+</html>
