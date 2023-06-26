@@ -12,15 +12,16 @@ var round = 0;
 // Detect if a key has been pressed to start the game
 $(document).keypress(function() {
     if (!isTheGameStarted) {
-        clickAndKeypressCallback();
+        // wait 300 ms if a key is pressed
+        setTimeout(function() { clickAndKeypressCallback(); }, 300);
     }
 });
 
 $(document).on('click','#the-title',function(){
     if (!isTheGameStarted) {
         titleAnimation();
-        clickAndKeypressCallback();
-        
+        // wait a bit more if clicking or tapping
+        setTimeout(function() { clickAndKeypressCallback(); }, 500);
     }
 });
 
