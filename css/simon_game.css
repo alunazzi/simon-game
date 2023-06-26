@@ -8,14 +8,14 @@
     --shadow-radius: 60px;
     --border-radius-px: 20px;
     --border-radius-perc: 100%;
-    --green: #3fb28d;
-    --light-green: #cbf6a0;
-    --red: #ff3e3e;
-    --light-red: #ffae6d;
-    --blue: #004fc4;
-    --light-blue: #a7d9ff;
-    --yellow: #ffcc00;
-    --light-yellow: #fff36d;
+    --green: hsl(161, 48%, 47%);
+    --light-green: hsl(90, 83%, 80%);
+    --red: hsl(0, 100%, 62%);
+    --light-red: hsl(27, 100%, 71%);
+    --blue: hsl(216, 100%, 38%);
+    --light-blue: hsl(206, 100%, 83%);
+    --yellow: hsl(48, 100%, 50%);
+    --light-yellow: hsl(55, 100%, 71%);
 }
 
 * {
@@ -76,6 +76,9 @@ h3 {
     font-size: 1.25rem;
     line-height: 2rem;
     color: #FFEFCA;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .container {
@@ -164,3 +167,56 @@ h3 {
     visibility: hidden;
 }
 
+
+
+/* SHAKING ANIMATION */
+.shaker {
+    animation: shake 0.3s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: 1; /* sigle shake */
+}
+  
+@keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+     10% { transform: translate(-1px, -2px) rotate(-1deg); }
+     20% { transform: translate(-3px, 0px) rotate(1deg); }
+     30% { transform: translate(3px, 2px) rotate(0deg); }
+     40% { transform: translate(1px, -1px) rotate(1deg); }
+     50% { transform: translate(-1px, 2px) rotate(-1deg); }
+     60% { transform: translate(-3px, 1px) rotate(0deg); }
+     70% { transform: translate(3px, 1px) rotate(-1deg); }
+     80% { transform: translate(-1px, -1px) rotate(1deg); }
+     90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+
+
+@media (width < 640px) {
+    h1 > span  {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem; 
+    }
+
+    h3 {
+        font-size: 1rem; 
+    }
+}
+
+@media (width < 500px) {
+    h1 > span  {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    h3 {
+        font-size: 1rem; 
+    }
+}

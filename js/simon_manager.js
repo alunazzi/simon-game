@@ -12,13 +12,32 @@ var round = 0;
 // Detect if a key has been pressed to start the game
 $(document).keypress(function() {
     if (!isTheGameStarted) {
-        $('#game-status').text('PLAYING').css("color", "var(--green)");
-        $('#instruction').text('Memorize the pattern and reproduce it by <CLICKING> on the right colors');
-        $('#round').text('Round ' + round);
-        nextStep();
-        isTheGameStarted = true;
+        clickAndKeypressCallback();
     }
 });
+
+$(document).on('click','#the-title',function(){
+    if (!isTheGameStarted) {
+        titleAnimation();
+        clickAndKeypressCallback();
+        
+    }
+});
+
+function clickAndKeypressCallback() {
+    $('#game-status').text('PLAYING').css("color", "var(--green)");
+    $('#instruction').text('Memorize the pattern and reproduce it by <CLICKING> or <TAPPING> on the right colors');
+    $('#round').text('Round ' + round);
+    nextStep();
+    isTheGameStarted = true;
+}
+
+function titleAnimation(){
+    $('#the-title').addClass('shaker'); 
+    setTimeout(function(){
+        $('#the-title').removeClass('shaker'); 
+    },300);
+}
 
 $('.button').click(function() {
     var userClickedColor = $(this).attr('id');
@@ -36,7 +55,7 @@ $('.button').click(function() {
 function checkUserChoice(currentRound) {
     // check if the user choice is the correct answer (same as the game pattern)
     if (pattern[currentRound] === userPattern[currentRound]) {
-        console.log('success');
+        //console.log('success');
         // if the user guessed the most recent step, then check if it is the pattern's last one.
         if (userPattern.length === pattern.length) {
             // proceed by calling nextStep() after a short timeout.
@@ -47,7 +66,7 @@ function checkUserChoice(currentRound) {
       } else {
         playSound('wrong');
         $('#game-status').text('GAME OVER!!!').css("color", "var(--red)");
-        $('#instruction').text('Press <ANY KEY> to <RESTART>.');
+        $('#instruction').text('Press <ANY KEY> or <TAP THE TITLE> to <RESTART>.');
         $('body').addClass('game-over');
         setTimeout(function(){
             $('body').removeClass('game-over');
